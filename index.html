@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css" />
+    <title>BookNook - Interactive Book Club</title>
+</head>
+<body>
+    <header>
+        <h1>BookNook <span class="pulse"></span></h1>
+        <p>Your peaceful corner for literary exploration</p>
+    </header>
+
+    <!-- Part 1: CSS3 Transitions and Animations -->
+    <section id="part1">
+        <h2>Part 1: CSS3 Transitions & Animations</h2>
+        <p>Hover over the book cards to see smooth transitions, and watch the animated reading progress indicators.</p>
+        
+        <div class="book-card">
+            <h3>The Great Gatsby</h3>
+            <p>F. Scott Fitzgerald</p>
+            <div class="reading-progress">
+                <div class="progress-bar" style="width: 75%"></div>
+            </div>
+            <p>Club reading progress: 75%</p>
+        </div>
+        
+        <div class="book-card">
+            <h3>Thinking, Fast and Slow</h3>
+            <p>Daniel Kahneman</p>
+            <div class="reading-progress">
+                <div class="progress-bar" style="width: 40%"></div>
+            </div>
+            <p>Club reading progress: 40%</p>
+        </div>
+        
+        <div class="book-card">
+            <h3>The Midnight Library</h3>
+            <p>Matt Haig</p>
+            <div class="reading-progress">
+                <div class="progress-bar" style="width: 90%"></div>
+            </div>
+            <p>Club reading progress: 90%</p>
+        </div>
+    </section>
+
+    <!-- Part 2: JavaScript Functions -->
+    <section id="part2">
+        <h2>Part 2: JavaScript Functions — Scope, Parameters & Return Values</h2>
+        <p>Explore how JavaScript functions work with different scopes, parameters, and return values.</p>
+        
+        <div class="function-demo">
+            <h3>Book Rating System</h3>
+            <p>Rate our current book (1-5 stars):</p>
+            <input type="number" id="ratingInput" min="1" max="5" placeholder="Enter rating">
+            <button onclick="submitRating()">Submit Rating</button>
+            <p id="ratingResult"></p>
+        </div>
+        
+        <div class="function-demo">
+            <h3>Reading Time Calculator</h3>
+            <p>Calculate how long it will take to read a book:</p>
+            <input type="number" id="pageCount" placeholder="Number of pages">
+            <input type="number" id="readingSpeed" placeholder="Pages per hour" value="30">
+            <button onclick="calculateReadingTime()">Calculate</button>
+            <p id="readingTimeResult"></p>
+        </div>
+        
+        <div class="function-demo">
+            <h3>Book Recommendation</h3>
+            <p>Get a personalized book recommendation based on your favorite genre:</p>
+            <select id="genreSelect">
+                <option value="fantasy">Fantasy</option>
+                <option value="mystery">Mystery</option>
+                <option value="sci-fi">Science Fiction</option>
+                <option value="non-fiction">Non-Fiction</option>
+                <option value="romance">Romance</option>
+            </select>
+            <button onclick="getRecommendation()">Get Recommendation</button>
+            <p id="recommendationResult"></p>
+        </div>
+    </section>
+
+    <!-- Part 3: Combining CSS Animations with JavaScript -->
+    <section id="part3">
+        <h2>Part 3: Combining CSS Animations with JavaScript</h2>
+        <p>Click on a book to see how JavaScript can trigger CSS animations.</p>
+        
+        <div class="book-shelf">
+            <div class="shelf-book" style="background-color: #8e99f3;" onclick="toggleBookDetails(0)">
+                D
+            </div>
+            <div class="shelf-book" style="background-color: #64d8cb;" onclick="toggleBookDetails(1)">
+                M
+            </div>
+            <div class="shelf-book" style="background-color: #ffb74d;" onclick="toggleBookDetails(2)">
+                T
+            </div>
+            <div class="shelf-book" style="background-color: #26a69a;" onclick="toggleBookDetails(3)">
+                S
+            </div>
+        </div>
+        
+        <div id="bookDetails0" class="book-details">
+            <h3>Deep Work</h3>
+            <p>Author: Cal Newport</p>
+            <p>Rating: 4.7/5</p>
+            <p>This book offers advice for developing deep focus skills in a distracted world.</p>
+        </div>
+        
+        <div id="bookDetails1" class="book-details">
+            <h3>Meditations</h3>
+            <p>Author: Marcus Aurelius</p>
+            <p>Rating: 4.5/5</p>
+            <p>A series of personal writings by the Roman Emperor on Stoic philosophy.</p>
+        </div>
+        
+        <div id="bookDetails2" class="book-details">
+            <h3>Thinking, Fast and Slow</h3>
+            <p>Author: Daniel Kahneman</p>
+            <p>Rating: 4.8/5</p>
+            <p>Explores the two systems that drive the way we think: fast, intuitive thinking, and slow, deliberate thinking.</p>
+        </div>
+        
+        <div id="bookDetails3" class="book-details">
+            <h3>Sapiens</h3>
+            <p>Author: Yuval Noah Harari</p>
+            <p>Rating: 4.7/5</p>
+            <p>A brief history of humankind, exploring how biology and history have defined us.</p>
+        </div>
+        
+        <button onclick="animateBooks()" style="margin-top: 20px;">Animate Bookshelf</button>
+    </section>
+    
+    <script src="js/script.js"></script>
+</body>
+</html>
